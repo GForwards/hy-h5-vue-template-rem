@@ -1,0 +1,42 @@
+/* 上下水平居中 */
+@mixin flex-all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 上下居中 */
+@mixin flex-x-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* 上下居中 */
+@mixin flex-y-center {
+  display: flex;
+  align-items: center;
+}
+
+/* flex-space-between */
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 超过两行省略... */
+@mixin overflow-line($line) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+/* 超出一行省略.... */
+@mixin overflow-one-line() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

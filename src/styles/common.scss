@@ -1,0 +1,105 @@
+/* 修改placeholder默认颜色 */
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: rgba(204, 204, 204, 1);
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgba(204, 204, 204, 1);
+}
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgba(204, 204, 204, 1);
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: rgba(204, 204, 204, 1);
+}
+
+/* toast 公共样式 */
+
+.van-toast {
+    min-width: unset;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    .van-toast__text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* 弹窗公共样式 */
+
+.van-dialog {
+    width: 275px !important;
+    border-radius: 8px;
+}
+
+.van-dialog {
+    .van-dialog__message {
+        white-space: normal;
+    }
+    .van-dialog__header {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 1);
+        padding-top: 20px;
+    }
+    .van-dialog__message--has-title {
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
+    .van-dialog__footer--buttons {
+        .van-button {
+            height: 48px;
+        }
+    }
+}
+
+#app {
+    // 下拉弹窗样式
+    .van-popup--bottom.van-popup--round {
+        border-radius: 12px 12px 0 0;
+    }
+}
+
+.btn-box {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    button {
+        width: 150px;
+        height: 48px;
+        @include flex-all-center;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 24px;
+    }
+
+    .comm-btn {
+        width: 100%;
+        height: 48px;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 24px;
+        @include flex-all-center;
+    }
+    .button-active {
+        background: #0f2540;
+        color: #efce90;
+    }
+    .button-disable {
+        background: rgba(15, 37, 64, 0.5);
+        color: rgba(239, 206, 144, 0.5);
+    }
+    .button-inactive {
+        background: white;
+        border: 1px solid #cccccc;
+        color: #cccccc;
+    }
+}
